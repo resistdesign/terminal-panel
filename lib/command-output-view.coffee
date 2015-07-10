@@ -49,7 +49,7 @@ class CommandOutputView extends View
           return @cd args
         if cmd == 'ls' and atom.config.get('terminal-panel.overrideLs')
           return @ls args
-        if cmd == 'clear'
+        if cmd == 'clear' || cmd == 'cls'
           @cliOutput.empty()
           @message '\n'
           return @cmdEditor.setText ''
